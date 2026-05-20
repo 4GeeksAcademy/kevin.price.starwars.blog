@@ -6,19 +6,9 @@ const Card = ({ item, type }) => {
     const { addFavorite, removeFavorite, isFavorite } = useContext(AppContext);
 
     const getImageUrl = () => {
-    const id = item.uid;
-    
-    switch(type) {
-        case 'people':
-            return `https://swapi.dev/api/people/${id}/image.jpg`;
-        case 'vehicles':
-            return `https://swapi.dev/api/vehicles/${id}/image.jpg`;
-        case 'planets':
-            return `https://swapi.dev/api/planets/${id}/image.jpg`;
-        default:
-            return 'https://via.placeholder.com/400x600?text=No+Image';
-    }
-};
+        return 'https://imgs.search.brave.com/arQPQ7au9hu7F6aS8KVOzvxjCObTQe9nKWiuQhUumGo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy82ZDYx/YjhmYy0xNzJkLTQ3/Y2UtYWYyMS1jNjE2/ZDllZjQ1YmIuanBn/P2Nyb3A9MS4wMHh3/OjEuMDB4aDswLDAm/cmVzaXplPTY0MDoq';
+    };
+
     const handleFavoriteClick = () => {
         const favoriteItem = {
             uid: item.uid,
